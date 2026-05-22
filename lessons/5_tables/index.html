@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* p {
+            transition: all 1s ease 0s;
+        } */
+        p:hover {
+            /* transform: rotate(40deg); */
+            animation-name: change-text;
+            animation-duration: 3s;
+            animation-timing-function: ease;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes change-text {
+            from {
+                color: black;
+            }
+
+            to {
+                color: chocolate;
+            }
+        }
+
+        td>img {
+            max-width: 150px;
+        }
+
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0.3em;
+            border-collapse: separate;
+            border-spacing: 0;
+            overflow: hidden;
+            border-radius: 15px;
+        }
+
+        /* table tr:last-child td {
+            border-bottom: none;
+        } */
+
+        /* table th:last-child,
+        table th:last-child {
+            border-right: none;
+        } */
+
+        /* tr {
+            border-radius: 15px;
+        } */
+
+        /* td:first-child {
+            text-align: center;
+        } */
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 0.4em;
+        }
+
+        /* tr:not(:first-child) {
+            height: 150px;
+        } */
+
+        /* p::after {
+            content: url('../gif-image.gif');
+        } */
+
+        thead {
+            border-top:none;
+            background-color: aquamarine;
+        }
+
+        tfoot {
+            text-align: center;
+            background-color: aqua;
+        }
+
+        tfoot>tr>td {
+            padding: 0;
+        }
+
+        .highlight {
+            background-color: cornflowerblue;
+        }
+
+        .empty-cells-table {
+            border-collapse: separate;
+            empty-cells: hide;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <caption>Користувачі</caption>
+        <colgroup>
+            <col>
+            <col class="highlight">
+            <col>
+        </colgroup>
+
+        <thead>
+            <tr>
+                <th>Аватар</th>
+                <th>Ім'я</th>
+                <th>E-mail</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><img src="./resources/emoji-picture-blue.png" alt="blue avatar"></td>
+                <td><span>Mr. Blue</span></td>
+                <td><a href="mailto:mr.blue@gmail.com">mr.blue@gmail.com</a></td>
+            </tr>
+            <tr>
+                <td><img src="./resources/emoji-picture.png" alt="not blue"></td>
+                <td><span>Mr. Not Blue</span></td>
+                <td><a href="mailto:mr.not.blue@gmail.com">mr.not.blue@gmail.com</a></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">
+                    <p>Це футер таблиці.</p>
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <table>
+        <tr>
+            <th colspan="2">Full Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>
+                Jill
+            </td>
+            <td>Smith</td>
+            <td>43</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>57</td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <th>Name</th>
+            <td>Jill Smith</td>
+        </tr>
+        <tr>
+            <th rowspan="2">Phone</th>
+            <td>555-1234</td>
+        </tr>
+        <tr>
+            <td>555-8745</td>
+        </tr>
+    </table>
+
+    <table class="empty-cells-table">
+        <tr>
+            <th>Column 1</th>
+            <th>Column 2</th>
+            <th>Column 3</th>
+        </tr>
+        <tr>
+            <td>Lorem, ipsum dolor.</td>
+            <td>Lorem ipsum dolor sit amet.</td>
+            <td>Lorem, ipsum.</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>Lorem ipsum dolor sit.</td>
+            <td></td>
+        </tr>
+    </table>
+
+
+    <!-- <p>Lorem ipsum dolor sit amet.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed inventore quibusdam dolore?</p> -->
+    <!-- <img src="../gif-image.gif" alt="lsd-trip"> -->
+</body>
+
+</html>
