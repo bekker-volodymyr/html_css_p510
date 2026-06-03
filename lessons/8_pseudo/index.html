@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Псевдоелементи та псевдокласи</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .demo::first-line {
+            color: #f38a89;
+            font-family: 'Courier New', Courier, monospace;
+            text-shadow: 2px 2px 15px black;
+        }
+
+        .demo::first-letter {
+            font-size: 3em;
+            border: 1px black dotted;
+        }
+
+        .demo::selection {
+            color: #e5f389;
+            background-color: #7471ff;
+            text-shadow: 1px 5px 8px #a0aa5f;
+        }
+
+        a {
+            display: block;
+            font-size: 2em;
+            margin: 15px;
+        }
+
+        section {
+            padding: 0.5em;
+            margin: 0.7em;
+            border: black solid 2px;
+            border-radius: 5px;
+        }
+
+        p:first-child {
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        p:last-child {
+            margin-top: 0.3em;
+            font-size: 0.7em;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        p:nth-of-type(3) {
+            padding: 0.8em;
+            text-indent: 0.5em;
+        }
+
+        p:nth-last-child(2) {
+            padding: 0.8em;
+            text-indent: 0.5em;
+        }
+
+        table,
+        td {
+            width: 80%;
+            margin: auto;
+            border: 1px black solid;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 0.75em;
+            border-right: 0;
+            border-left: 0;
+            width: auto;
+        }
+
+        tr:nth-child(odd) {
+            /* background-color: aliceblue; */
+            animation: odd-rows 5s infinite cubic-bezier(1, 0.01, 1, -0.14) alternate-reverse;
+
+        }
+
+        tr:nth-child(even) {
+            /* background-color: aliceblue; */
+            animation: even-rows 5s infinite cubic-bezier(1, 0.01, 1, -0.14) alternate-reverse;
+        }
+
+        @keyframes odd-rows {
+            from {
+                background-color: white;
+            }
+
+            50% {
+                background-color: aquamarine;
+            }
+
+            to {
+                background-color: white;
+            }
+        }
+
+        @keyframes even-rows {
+            from {
+                background-color: aquamarine;
+            }
+
+            50% {
+                background-color: white;
+            }
+
+            to {
+                background-color: aquamarine;
+            }
+        }
+
+        article:only-child {
+            background-color: #f38b89ad;
+        }
+
+        .menu {
+            list-style-type: none;
+        }
+
+        .menu-item:not(:last-child) {
+            border-bottom: 1px black solid;
+            margin-bottom: 5px;
+        }
+
+        #section3 {
+            display: none;
+        }
+
+        #section3:target {
+            display: block;
+            box-shadow: 5px 5px 15px #f38a89;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Псевдоелементи та псевдокласи</h1>
+
+    <ul class="menu">
+        <li class="menu-item">Головна</li>
+        <li class="menu-item">Про нас</li>
+        <li class="menu-item">Послуги</li>
+        <li class="menu-item">Контакти</li>
+    </ul>
+
+    <p lang="eu" class="demo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab ut nam pariatur? Lorem ipsum
+        dolor sit amet consectetur adipisicing elit. Unde consectetur provident officiis fugit, quam magni non laborum
+        at autem excepturi nisi, odio inventore assumenda corrupti debitis ipsa tempora vero dolorum atque nulla ab
+        aliquam accusamus!</p>
+
+    <a href="#section3">link</a>
+
+    <section>
+        <!-- <h3>Lorem ipsum dolor sit.</h3> -->
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam veritatis minima illo tenetur, cum officia
+                delectus dolore facere distinctio eum odio explicabo a quod, earum voluptatibus harum quos? Quasi nemo
+                recusandae excepturi quae ipsum, doloribus iste numquam enim mollitia voluptas harum, asperiores,
+                deserunt fuga neque!</p>
+            <img src="./emoji-picture-blue.png" alt="img">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate voluptatum repellendus, provident
+                totam nostrum tempore sit soluta. Est itaque atque voluptatem qui in obcaecati rem alias repudiandae
+                aspernatur labore. Maxime earum molestiae esse officiis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maiores fuga qui reiciendis nisi
+                consequatur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias amet ullam ipsa ducimus quidem! Rem
+                voluptates iste debitis autem ipsum?</p>
+        </article>
+    </section>
+    <section>
+        <!-- <h3>Lorem ipsum dolor sit.</h3> -->
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam veritatis minima illo tenetur, cum officia
+                delectus dolore facere distinctio eum odio explicabo a quod, earum voluptatibus harum quos? Quasi nemo
+                recusandae excepturi quae ipsum, doloribus iste numquam enim mollitia voluptas harum, asperiores,
+                deserunt fuga neque!</p>
+            <img src="./emoji-picture-blue.png" alt="img">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate voluptatum repellendus, provident
+                totam nostrum tempore sit soluta. Est itaque atque voluptatem qui in obcaecati rem alias repudiandae
+                aspernatur labore. Maxime earum molestiae esse officiis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maiores fuga qui reiciendis nisi
+                consequatur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias amet ullam ipsa ducimus quidem! Rem
+                voluptates iste debitis autem ipsum?</p>
+        </article>
+    </section>
+    <section id="section3">
+        <!-- <h3>Lorem ipsum dolor sit.</h3> -->
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam veritatis minima illo tenetur, cum officia
+                delectus dolore facere distinctio eum odio explicabo a quod, earum voluptatibus harum quos? Quasi nemo
+                recusandae excepturi quae ipsum, doloribus iste numquam enim mollitia voluptas harum, asperiores,
+                deserunt fuga neque!</p>
+            <img src="./emoji-picture-blue.png" alt="img">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate voluptatum repellendus, provident
+                totam nostrum tempore sit soluta. Est itaque atque voluptatem qui in obcaecati rem alias repudiandae
+                aspernatur labore. Maxime earum molestiae esse officiis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maiores fuga qui reiciendis nisi
+                consequatur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias amet ullam ipsa ducimus quidem! Rem
+                voluptates iste debitis autem ipsum?</p>
+        </article>
+    </section>
+    <section>
+        <!-- <h3>Lorem ipsum dolor sit.</h3> -->
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis, quae.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam veritatis minima illo tenetur, cum officia
+                delectus dolore facere distinctio eum odio explicabo a quod, earum voluptatibus harum quos? Quasi nemo
+                recusandae excepturi quae ipsum, doloribus iste numquam enim mollitia voluptas harum, asperiores,
+                deserunt fuga neque!</p>
+            <img src="./emoji-picture-blue.png" alt="img">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate voluptatum repellendus, provident
+                totam nostrum tempore sit soluta. Est itaque atque voluptatem qui in obcaecati rem alias repudiandae
+                aspernatur labore. Maxime earum molestiae esse officiis?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo maiores fuga qui reiciendis nisi
+                consequatur.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias amet ullam ipsa ducimus quidem! Rem
+                voluptates iste debitis autem ipsum?</p>
+        </article>
+    </section>
+
+    <table>
+        <tr> <!--TABLE ROW-->
+            <td>
+                CELL 1
+            </td>
+            <td>
+                CELL 2
+            </td>
+            <td>
+                CELL 3
+            </td>
+            <td>
+                CELL 4
+            </td>
+        </tr>
+        <tr> <!--TABLE ROW-->
+            <td>
+                CELL 1
+            </td>
+            <td>
+                CELL 2
+            </td>
+            <td>
+                CELL 3
+            </td>
+            <td>
+                CELL 4
+            </td>
+        </tr>
+        <tr> <!--TABLE ROW-->
+            <td>
+                CELL 1
+            </td>
+            <td>
+                CELL 2
+            </td>
+            <td>
+                CELL 3
+            </td>
+            <td>
+                CELL 4
+            </td>
+        </tr>
+        <tr> <!--TABLE ROW-->
+            <td>
+                CELL 1
+            </td>
+            <td>
+                CELL 2
+            </td>
+            <td>
+                CELL 3
+            </td>
+            <td>
+                CELL 4
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
