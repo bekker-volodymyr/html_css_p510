@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2 {
+            margin: 10px;
+        }
+
+        .div-demo {
+            background-color: darksalmon;
+            border: solid black 2px;
+            width: 200px;
+            height: 50px;
+
+            text-align: center;
+        }
+
+        .pos-stat {
+            position: static;
+        }
+
+        .pos-rel {
+            position: relative;
+            left: 50px;
+            /* right: 60px; */
+            top: 100px;
+            /* bottom: 30px; */
+        }
+
+        .pos-fixed {
+            position: fixed;
+            top: 500px;
+            right: 200px;
+        }
+
+        .top-fixed {
+            position: fixed;
+            top: 0;
+        }
+
+        .rel-parent {
+            width: 400px;
+            height: 150px;
+            border: solid 1px black;
+
+            position: relative;
+            left: 25px;
+        }
+
+        .pos-abs {
+            position: absolute;
+            left: 50px;
+        }
+
+        .pos-sticky {
+            position: sticky;
+            top: 10px;
+            /* z-index: -10; */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Позиціонування</h1>
+    <h2>Статичне позиціонування</h2>
+    <div class="div-demo pos-stat">position: static;</div>
+
+
+    <div class="div-demo pos-sticky">position: sticky;</div>
+
+    <h2>Відносне позиціонування</h2>
+    <div class="div-demo pos-rel">postion: relative;</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, magnam nam nobis maiores vero delectus, sit esse
+        accusamus provident labore, repudiandae tempora expedita! Quasi nihil cumque velit? Labore corrupti quia
+        officiis perspiciatis alias nulla nihil in modi iste! Quidem, commodi quis ab dolor deleniti adipisci architecto
+        laboriosam quos tenetur delectus? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt aliquid
+        distinctio optio reiciendis non assumenda nostrum, voluptatibus officiis numquam consequatur facilis placeat
+        impedit? Earum alias sequi sunt dicta dolor. Saepe.</p>
+
+    <div class="div-demo pos-fixed">position: fixed;</div>
+
+    <!-- <div class="div-demo top-fixed">fixed on the top</div> -->
+
+    <div class="rel-parent">
+        <div class="div-demo pos-abs">position: absolute;</div>
+    </div>
+
+    <!-- <div class="div-demo pos-abs">position: absolute;</div> -->
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolore molestiae eaque accusantium necessitatibus
+        ipsam dicta fugit dignissimos dolores illo, perspiciatis voluptatum ut reprehenderit veniam adipisci harum
+        accusamus autem amet officia tenetur. Necessitatibus quaerat, qui ipsa eaque deserunt debitis commodi, incidunt
+        alias nemo dolores maiores! Molestiae assumenda impedit fuga quas vero in dicta culpa, facere doloremque iure a?
+        Iure temporibus aliquam id voluptatum mollitia, similique accusamus fuga quidem aut! Libero officiis assumenda
+        odio iure quam explicabo. Sed aut quidem incidunt, dolorum ea laboriosam saepe perspiciatis recusandae porro
+        voluptates rerum ipsum consequuntur, hic ipsa autem, itaque odio quo maxime est nisi.</p>
+
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias aliquam velit nesciunt rerum ea, fugit
+        delectus vitae amet odit recusandae in dolores suscipit? Sunt, exercitationem nam asperiores enim fugiat dolorem
+        in molestiae sequi ipsa tenetur, amet harum omnis beatae dolore natus expedita recusandae ducimus, ipsum vitae!
+        Tenetur in asperiores id blanditiis unde doloribus quis animi sapiente et laudantium quos amet minima est enim,
+        deserunt illo velit corrupti laboriosam temporibus numquam fuga rerum incidunt nemo. Molestiae, ut cum.
+        Repudiandae accusamus eligendi voluptatum nemo tenetur iure sed nesciunt maiores, quis possimus dignissimos ut
+        dolore quod aliquid totam neque perspiciatis quo mollitia. Officiis omnis iste provident mollitia placeat
+        tempore quis accusantium nihil. Voluptatibus aliquid corrupti saepe quidem, nostrum laboriosam perferendis at,
+        dolorem, eveniet numquam minima similique? Quaerat, ut consequatur? Aliquam maiores odio facere beatae pariatur
+        molestiae praesentium, corporis exercitationem quisquam assumenda facilis consequatur autem impedit nam possimus
+        delectus iure voluptatibus a. Odit, sit esse eum delectus labore est sunt quam animi laboriosam cupiditate sequi
+        minus, vitae doloribus quo? Aliquid itaque autem quia ullam reprehenderit, fuga nesciunt consequatur error odit
+        atque provident beatae sequi incidunt tempora blanditiis ex tenetur asperiores odio? Voluptatibus velit animi
+        dolor alias! Repellat autem debitis alias corporis ea nulla mollitia.</p>
+</body>
+
+</html>
