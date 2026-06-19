@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: Helvetica, sans-serif;
+  background-color: #4fa5d0;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  display: inline-block;
+}
+nav a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #d6ba98;
+  color: #4fa5d0;
+}
+
+.danger {
+  background-color: #d6ba98;
+  color: rgb(196, 53, 53);
+  font-weight: bold;
+  border: 1px solid blue;
+  text-align: center;
+}
+
+.article {
+  border: green solid 4px;
+}
+
+.button-basic, .button-submit, .button-report {
+  border: none;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button-report {
+  background-color: red;
+}
+
+.button-submit {
+  background-color: green;
+  color: white;
+}/*# sourceMappingURL=styles.css.map */
